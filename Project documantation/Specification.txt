@@ -1,0 +1,151 @@
+# One Bite
+
+One Bite is a command-line tool that enables developers to easily manage file templates and create new files with extracted functions from existing source files.
+
+## Project Objective
+
+The objective of the "One Bite" project is to create a command-line tool that enables developers to easily manage file templates and create new files with extracted functions from existing source files. This tool will be globally available from the console and installed using `pip`.
+
+## Functionalities
+
+1. Setting a Template for New Files:
+   * **Command**: `onebite Template <path_to_template_file>`
+   * **Description**: Sets the specified file as the template for new files created using One Bite. The template is stored in the `.onebite/templates` directory in the user's home directory.
+
+2. Checking the Current Template:
+   * **Command**: `onebite Where Template`
+   * **Description**: Returns the path to the currently set template file.
+
+3. Creating a New File Containing a Function:
+   * **Command**: `onebite Create <source_file> <function_name>`
+   * **Description**: Creates a new file containing the specified function. The new file is created in the `One Bite Functions Snippets` directory in the current working directory. If the directory does not exist, it will be created.
+
+## Implementation Details
+
+### Installation
+
+The One Bite project will be installed using `pip`, providing easy installation and updates. The installation process includes:
+
+1. **Project Structure**:
+   * The project follows the standard Python package directory structure:
+
+   ```
+  onebite/
+├── onebite/
+│   ├── __init__.py
+│   ├── __main__.py
+│   ├── cli.py
+│   ├── template_manager.py
+│   ├── function_extractor.py
+│   ├── file_creator.py
+│   ├── utils.py
+│   └── config.py
+├── templates/
+│   └── default_template.py
+├── tests/
+│   ├── __init__.py
+│   ├── test_cli.py
+│   ├── test_template_manager.py
+│   ├── test_function_extractor.py
+│   └── test_file_creator.py
+├── setup.py
+├── pyproject.toml
+└── README.md
+   ```
+
+2. `setup.py` File:
+   * The `setup.py` file contains the package configuration, including the `entry_points` section, ensuring the commands are available from the console.
+
+### Adding Commands to the Console
+
+1. **Shebang**:
+   * The `onebite.py` script contains the shebang line at the beginning of the file: `#!/usr/bin/env python3`.
+
+2. `entry_points` Section in `setup.py`:
+   * The `entry_points` configuration allows running the `onebite` commands from the console:
+
+   ```python
+   entry_points={
+       'console_scripts': [
+           'onebite=onebite.__main__:main'
+       ]
+   }
+   ```
+
+3. **Installation**:
+   * The user will install the tool using the command: `pip install .`
+   * After installation, the `onebite` commands will be globally available in the system.
+
+### Code Parsing Methodology
+
+1. **Extracting Imports**:
+   * Imports are extracted from both the template and source files by searching for lines starting with `import` or `from`. Unique imports are stored in a set.
+
+2. **Extracting Functions**:
+   * The function is extracted based on the line starting with `def function_name(`. Indentation is used to determine the beginning and end of the function.
+
+3. **Creating the New File**:
+   * The new file is created in the `One Bite Functions Snippets` directory and contains unique imports, template content, and the extracted function.
+
+## Modularity and Testability
+
+### Modular Architecture
+
+One Bite is designed with modularity in mind, offering several advantages:
+
+- **Separation of Concerns**: Each module has a specific responsibility, making the codebase easier to understand and maintain.
+- **Reusability**: Modules can be easily reused in different parts of the project or even in other projects.
+- **Scalability**: New features can be added by creating new modules or extending existing ones without affecting the entire system.
+
+The project is divided into the following modules:
+
+- `cli.py`: Handles command-line interface logic
+- `template_manager.py`: Manages template-related operations
+- `function_extractor.py`: Extracts functions from source files
+- `file_creator.py`: Creates new files based on templates and extracted functions
+- `utils.py`: Contains utility functions used across the project
+- `config.py`: Stores project configuration and constants
+
+### Testability
+
+The modular design of One Bite enhances its testability:
+
+- **Unit Testing**: Each module can be tested independently, allowing for comprehensive test coverage.
+- **Mocking**: Dependencies between modules can be easily mocked, enabling isolated testing of individual components.
+- **Test Organization**: The `tests/` directory mirrors the structure of the `onebite/` directory, making it easy to locate and maintain tests.
+
+To run the tests, use the following command from the project root:
+
+```
+pytest tests/
+```
+
+When adding new functionality, create corresponding test files in the `tests/` directory and aim for high test coverage, especially for critical functionality.
+
+## Example Usage
+
+1. **Setting a Template**:
+   ```sh
+   onebite Template /path/to/template.py
+   ```
+
+2. **Checking the Current Template**:
+   ```sh
+   onebite Where
+   ```
+
+3. **Creating a New File with a Function**:
+   ```sh
+   onebite Create source_file.py function_name
+   ```
+
+## Contributing
+
+Contributions to One Bite are welcome! When contributing:
+
+1. Consider whether your feature fits into an existing module or requires a new one.
+2. Update this README.md with any new commands or functionalities.
+3. Add appropriate unit tests for new code.
+4. Ensure all tests pass before submitting a pull request.
+
+By following these guidelines, we can maintain the modularity and testability of the One Bite project as it grows and evolves.

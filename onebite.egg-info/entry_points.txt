@@ -1,0 +1,2 @@
+[console_scripts]
+onebite = onebite.__main__:main

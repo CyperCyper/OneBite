@@ -1,0 +1,54 @@
+Wymagania funkcjonalne dla projektu One Bite
+
+Zarządzanie szablonami
+1.1. Użytkownik może ustawić plik jako szablon dla nowych plików.
+- Komenda: onebite Template <path_to_template_file>
+- Szablon jest kopiowany do katalogu .onebite/templates w katalogu domowym użytkownika.
+- W przypadku gdy szablon jest już używany onebite musi zapytać się czy chcesz podmienić obecny szablon? [Y/N]
+1.2. Użytkownik może sprawdzić aktualnie ustawiony szablon.
+- Komenda: onebite Where Template
+- Wyświetlana jest ścieżka do aktualnego szablonu.
+Ekstrakcja i tworzenie plików
+2.1. Użytkownik może utworzyć nowy plik zawierający wybraną funkcję z istniejącego pliku źródłowego.
+- Komenda: onebite Create <source_file> <function_name>
+- Nowy plik jest tworzony w katalogu One Bite Functions Snippets w bieżącym katalogu roboczym.
+2.2. System ekstrahuje wszystkie importy z pliku źródłowego i szablonu.
+2.3. System ekstrahuje wybraną funkcję z pliku źródłowego.
+2.4. Nowy plik zawiera unikalne importy, zawartość szablonu i wyekstrahowaną funkcję.
+Obsługa błędów
+3.1. System informuje użytkownika o błędach, takich jak:
+- Nieistniejący plik szablonu lub źródłowy
+- Brak wybranej funkcji w pliku źródłowym
+- Brak uprawnień do zapisu w odpowiednich katalogach
+Instalacja i konfiguracja
+4.1. Narzędzie może być zainstalowane globalnie za pomocą pip.
+4.2. Po instalacji, komendy onebite są dostępne z linii poleceń w całym systemie.
+Kompatybilność
+5.1. Narzędzie działa na systemach Linux, macOS i Windows.
+5.2. Narzędzie jest kompatybilne z Python 3.6 i nowszymi wersjami.
+Wydajność
+6.1. Operacje na plikach (kopiowanie szablonu, tworzenie nowego pliku) nie powinny trwać dłużej niż 1 sekundę dla plików o rozmiarze do 1MB.
+6.2. Ekstrakcja funkcji z pliku źródłowego nie powinna trwać dłużej niż 2 sekundy dla plików o rozmiarze do 1MB.
+Bezpieczeństwo
+7.1. Narzędzie nie modyfikuje oryginalnych plików źródłowych.
+7.2. Narzędzie nie nadpisuje istniejących plików bez wyraźnej zgody użytkownika.
+Dokumentacja
+8.1. Narzędzie zawiera plik README z instrukcjami instalacji i użytkowania.
+8.2. Każda komenda ma dostępną pomoc (np. onebite --help).
+Rozszerzalność
+9.1. Architektura narzędzia pozwala na łatwe dodawanie nowych funkcjonalności w przyszłości.
+Obsługa kodowań plików
+10.1. Narzędzie powinno poprawnie odczytywać pliki źródłowe w różnych kodowaniach, w tym co najmniej:
+- UTF-8
+- ASCII
+- UTF-16
+- ISO-8859-1
+10.2. Narzędzie powinno automatycznie wykrywać kodowanie pliku źródłowego.
+10.3. Narzędzie powinno zachowywać oryginalne kodowanie przy tworzeniu nowych plików.
+10.4. W przypadku niemożności określenia kodowania, narzędzie powinno domyślnie użyć UTF-8 i poinformować o tym użytkownika.
+10.5. Narzędzie powinno obsługiwać pliki z dyrektywą kodowania PEP 263.
+Obsługa plików o różnych rozmiarach
+11.1. Narzędzie powinno efektywnie obsługiwać pliki źródłowe o różnych rozmiarach, od małych (kilka linii) do dużych (co najmniej 10,000 linii).
+11.2. Dla plików przekraczających 1MB, narzędzie powinno wyświetlić ostrzeżenie o potencjalnie długim czasie przetwarzania.
+11.3. Narzędzie powinno umożliwiać przerwanie operacji przez użytkownika w przypadku zbyt długiego czasu przetwarzania.
+11.4. Dla bardzo dużych plików (>5MB), narzędzie powinno oferować opcję przetwarzania przyrostowego lub częściowego, jeśli to możliwe.
