@@ -50,9 +50,9 @@ def console_output(message, level='info'):
         'error': logging.error,
         'critical': logging.critical
     }
-    log_message = message.replace(',',';')
+    
     log_func = log_levels.get(level.lower(), logging.info)
-    log_func(log_message)
+    log_func(message)
     print(f"{message}")
     print()
 
@@ -87,43 +87,22 @@ def get_menu_input(prompt, log_message=None):
     """
     user_input = str(input(prompt)).upper()
     if log_message is None:
-        log_message = (f"User input for '{prompt}': {user_input}").replace(',',';')
+        log_message = f"User input for '{prompt}': {user_input}"
     logging.info(log_message)
     return user_input
 
-def menu_heading(menu_title):
-        width = 100
-        border_symbol = '-'
 
-        print("\n" + border_symbol * width)
-        print(f"{menu_title}")
-        print(border_symbol * width)
 
-def generate_options_string(options):
-        if isinstance(options, dict):
-            return ','.join(f"[{key}]" for key in options.keys())
-        elif isinstance(options, list):
-            return ','.join(f"[{i+1}]" for i in range(len(options)))
-        else:
-            return str(options)
 
-def menu_display(menu_title, menu_actions):
-     menu_heading(menu_title)
-     for key, (description, _) in menu_actions.items():
-          print((f"[{key}] to {description}"))
-     print()
 
-def exit_menu_action(message):
-        console_output(f"{message}")
-        return True     
 
 
 # if __name__ == "__main__":
 #     setup_logger()
 #     logging.debug(f"Logger working for utils.py")
     
-# #    choice = get_user_input("Enter yout choice: ")
-#     console_output(f"Test konsoli ,,,,;;;;")
+#     choice = get_user_input("Enter yout choice: ")
+
 
 
 

@@ -1,0 +1,10 @@
+Timestamp,Level,Module,Function,Message,Path:Line
+2024-07-12 10:37:14,INFO,root,initialize_logger,Program onebite started!,C:\Users\cypro\OneDrive\Pulpit\Nauka IT\Python\OneBite\onebite\utils.py:32
+2024-07-12 10:37:14,INFO,root,initialize_logger,Log file configuration completed successfully. Logger level debug.,C:\Users\cypro\OneDrive\Pulpit\Nauka IT\Python\OneBite\onebite\utils.py:33
+2024-07-12 10:37:14,INFO,root,initialize_logger,Log file path:C:\Users\cypro\OneDrive\Pulpit\Nauka IT\Python\OneBite\onebite\onebite_log.csv,C:\Users\cypro\OneDrive\Pulpit\Nauka IT\Python\OneBite\onebite\utils.py:34
+2024-07-12 10:37:14,INFO,root,main,Main function started,C:\Users\cypro\OneDrive\Pulpit\Nauka IT\Python\OneBite\onebite\__main__.py:9
+2024-07-12 10:37:14,INFO,root,main,Parser configuration completed!,C:\Users\cypro\OneDrive\Pulpit\Nauka IT\Python\OneBite\onebite\__main__.py:14
+2024-07-12 10:37:14,INFO,root,main,Template command created!,C:\Users\cypro\OneDrive\Pulpit\Nauka IT\Python\OneBite\onebite\__main__.py:20
+2024-07-12 10:37:14,INFO,root,main,Create command created!,C:\Users\cypro\OneDrive\Pulpit\Nauka IT\Python\OneBite\onebite\__main__.py:26
+2024-07-12 10:37:16,INFO,root,get_menu_input,User input for 'Press key from [T];[C];[E]: ': E,C:\Users\cypro\OneDrive\Pulpit\Nauka IT\Python\OneBite\onebite\utils.py:91
+2024-07-12 10:37:16,INFO,root,console_output,Exiting One Bite. Goodbye!,C:\Users\cypro\OneDrive\Pulpit\Nauka IT\Python\OneBite\onebite\utils.py:55

@@ -1,0 +1,18 @@
+2024-07-10 20:43:51	INFO	root	main	Main function started	C:\Users\cypro\OneDrive\Pulpit\Nauka IT\Python\OneBite\onebite\cli.py	8
+2024-07-10 20:43:51	INFO	root	main	Parser configuration completed!	C:\Users\cypro\OneDrive\Pulpit\Nauka IT\Python\OneBite\onebite\cli.py	13
+2024-07-10 20:43:51	INFO	root	main	Template command cereated!	C:\Users\cypro\OneDrive\Pulpit\Nauka IT\Python\OneBite\onebite\cli.py	19
+2024-07-10 20:43:51	INFO	root	main	Create command created!	C:\Users\cypro\OneDrive\Pulpit\Nauka IT\Python\OneBite\onebite\cli.py	25
+2024-07-10 20:43:51	INFO	root	initialize_logger	Program onebite started!	C:\Users\cypro\OneDrive\Pulpit\Nauka IT\Python\OneBite\onebite\logger.py	32
+2024-07-10 20:43:51	INFO	root	initialize_logger	Log file configuration completed successfully. Logger level debug.	C:\Users\cypro\OneDrive\Pulpit\Nauka IT\Python\OneBite\onebite\logger.py	33
+2024-07-10 20:43:51	INFO	root	initialize_logger	Log file path:C:\Users\cypro\OneDrive\Pulpit\Nauka IT\Python\OneBite\onebite\onebite_log.csv	C:\Users\cypro\OneDrive\Pulpit\Nauka IT\Python\OneBite\onebite\logger.py	34
+2024-07-10 21:16:19	DEBUG	root	<module>	To jest wiadomość DEBUG	C:\Users\cypro\OneDrive\Pulpit\Nauka IT\Python\OneBite\onebite\logger.py	41
+2024-07-10 21:16:19	INFO	root	<module>	To jest wiadomość INFO	C:\Users\cypro\OneDrive\Pulpit\Nauka IT\Python\OneBite\onebite\logger.py	42
+2024-07-10 21:16:19	WARNING	root	<module>	To jest wiadomość WARNING	C:\Users\cypro\OneDrive\Pulpit\Nauka IT\Python\OneBite\onebite\logger.py	43
+2024-07-10 21:16:19	ERROR	root	<module>	To jest wiadomość ERROR	C:\Users\cypro\OneDrive\Pulpit\Nauka IT\Python\OneBite\onebite\logger.py	44
+2024-07-10 21:16:19	CRITICAL	root	<module>	To jest wiadomość CRITICAL	C:\Users\cypro\OneDrive\Pulpit\Nauka IT\Python\OneBite\onebite\logger.py	45
+2024-07-10 21:41:24	DEBUG	root	logger_test	To jest wiadomość DEBUG	C:\Users\cypro\OneDrive\Pulpit\Nauka IT\Python\OneBite\onebite\logger.py:42	
+2024-07-10 21:41:24	INFO	root	logger_test	To jest wiadomość INFO	C:\Users\cypro\OneDrive\Pulpit\Nauka IT\Python\OneBite\onebite\logger.py:43	
+2024-07-10 21:41:24	WARNING	root	logger_test	To jest wiadomość WARNING	C:\Users\cypro\OneDrive\Pulpit\Nauka IT\Python\OneBite\onebite\logger.py:44	
+2024-07-10 21:41:24	ERROR	root	logger_test	To jest wiadomość ERROR	C:\Users\cypro\OneDrive\Pulpit\Nauka IT\Python\OneBite\onebite\logger.py:45	
+2024-07-10 21:41:24	CRITICAL	root	logger_test	To jest wiadomość CRITICAL	C:\Users\cypro\OneDrive\Pulpit\Nauka IT\Python\OneBite\onebite\logger.py:46	
+						

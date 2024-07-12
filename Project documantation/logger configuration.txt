@@ -1,0 +1,8 @@
+Założenia loggera:
+
+1. Chciał bym w osobnym module przetrzymywać plik konfigurujący loggera.
+2. Funckja zdefiniowana w module czyli log_config(level='debug') powinna zostać wywołana raz,
+- zaraz po włączeniu programu powinien nadpisać plik loggera (chcę śledzić pojedyńcze uruchomienia programu a nie całą historię)
+- powinna dokonać pierwszych wpisów do pliku z loggami z nazwą uruchomionego programu (onebite).
+3. Korzystanie z loggera w pozostałych modułach powinno być zintegrowane tzn. wszystkie funckje pozostawiają logi w jednym pliku
+4. Korzystaenie z loggera nie powinno odbywać się za pomocą komend z modułu logging czyli np. logging.info() bez wykorzystywania innych nazw (np. logger)
